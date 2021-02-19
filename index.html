@@ -27,7 +27,7 @@
     <script type="text/javascript">
     var options = {
         title: '&#x1F36A; Accept Cookies & Privacy Policy?',
-        message: 'This site uses cookies to improve your experience of the site. Click the <strong>accept</strong> button to allow cookies.',
+        message: 'This site uses cookies to improve your experience. By continuing to browse you consent to the use of cookies.',
         delay: 600,
         expires: 1,
         link: 'cookies.html',
@@ -35,21 +35,6 @@
             var myPreferences = $.fn.ihavecookies.cookie();
             console.log('Yay! The following preferences were saved...');
             console.log(myPreferences);
-
-            <!-- Google Tag Manager -->
-			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-P85B2K6');
-			<!-- End Google Tag Manager -->
-			
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-178267655-1');
-			
         },
         uncheckBoxes: false,
         acceptBtnLabel: 'Accept Cookies',
@@ -64,32 +49,35 @@
 
         if ($.fn.ihavecookies.preference('marketing') === true) {
         	console.log('Cookies accepted!');
-            <!-- Google Tag Manager -->
-			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-P85B2K6');
-			<!-- End Google Tag Manager -->
-			
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-178267655-1');
+            
         }
 
         $('#ihavecookiesBtn').on('click', function(){
             $('body').ihavecookies(options, 'reinit');
         });
     });
+	<!-- Google Tag Manager -->
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-P85B2K6');
+	<!-- End Google Tag Manager -->
+	
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
+	gtag('config', 'UA-178267655-1');
+	
+	
     </script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Quicksand:400,500" rel="stylesheet">
     <link href="css/example.css" rel="stylesheet">
 	
 </head>
 <body>
+
 <div class="site-section">
 	<h1>
 		<a href=""><img alt="NotAFan" src="img/logo.jpg" /></a>
